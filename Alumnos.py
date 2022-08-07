@@ -16,8 +16,9 @@ def entrada_informacion():
     
 def consulta():
     query = cursor.execute("SELECT Nombre FROM tabla_alumnos WHERE id=2")
-    for alumno in query:
-        print("Nombre del alumno", alumno)
+    for queryid in query:
+        alumno = ' '.join(queryid)
+        print("Nombre del alumno:", alumno)
         break
     conn.commit()
 crear_tabla()
